@@ -1,0 +1,229 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+body {
+    background-color: darkgray;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    /* background-image: url("cork-board.webp"); */
+}
+
+h1 {
+    font-size: 50px;
+    font-weight: bold;
+    padding: 20px;   
+}
+
+h2{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.navigasi{
+    padding: 10px;
+}
+
+.navigasi ul li{
+    display: inline;
+    color: tan;
+    box-sizing: border-box;
+    margin : 10px;
+    padding-right: 10px;
+    border-right: 2px solid black;
+
+}
+
+.navigasi ul li :hover{
+    color: white;
+    background-color: salmon;
+    
+}
+
+.navigasi ul li a{
+    text-decoration: none;
+    color: salmon;
+}
+
+.container {
+    background-color: white;
+    width: 960px;
+    margin: auto;
+    position: relative;
+    margin-top: 80px;
+}
+
+header{
+    height: 50px;
+    width: 100%;
+    border-bottom: 1px solid salmon;
+    top: 0;
+    z-index: 1;
+    background-color: lightblue;
+    position: fixed;
+}
+
+.heroImg {
+    /* background-color: bisque; */
+    height: 200px;
+    background-image: url("image.jpg");
+    background-size: cover;
+    background-position: 0 -75px;
+    background-repeat: no-repeat;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    border-top: 3px solid skyblue;
+    border-bottom: 3px solid gray;
+}
+
+.navigasi .heroImg img{
+    background-size: cover;
+}
+
+.container .conten{
+    margin: 20px;
+}
+
+.container .conten .utama .title{
+    margin: 20px;
+    margin-left: 0;
+    
+}
+
+.container .conten .utama .title h2{
+    font-size: 35px;
+    font-weight: lighter;
+}
+
+.container .conten .utama .artikel{
+    float: left;
+    width: 600px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.container .conten .utama .title p{
+    font-size: 12px;
+}
+
+.container .conten .utama .artikel p {
+    margin-bottom: 10px;
+}
+
+.container .conten .penulis{
+    width: 300px;
+    padding: 10px;
+    box-sizing: border-box;
+    float: right;
+}
+
+.container .conten .penulis img{
+    float: left;
+}
+
+.container .conten .penulis p{
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.container .copyright{
+    background-color: #232527;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: white;
+    font-size: 15px;
+}
+
+.container .copyright p  :link{
+    color: gray;
+}
+
+.container .copyright p{
+    
+    margin: auto;
+}
+
+div .ribon a img{
+    display : inline-block;
+    height : 100px;
+    /* background-image: url("Linkedin-ribbon.png"); */
+    /* background-color: red; */
+}
+
+.ribon{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+/**
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+ .cf:before,
+ .cf:after {
+     content: " "; /* 1 */
+     display: table; /* 2 */
+ }
+ 
+ .cf:after {
+     clear: both;
+ }
+ 
+ /**
+  * For IE 6/7 only
+  * Include this rule to trigger hasLayout and contain floats.
+  */
+ .cf {
+     *zoom: 1;
+ }
