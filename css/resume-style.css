@@ -1,7 +1,12 @@
 .resume{
-    display: flex;
     justify-content: space-between;
     gap: 170px;
     align-items: start;
-    padding: 55px 0;
+    padding-top: 55px;
+    padding-bottom: 55px;
+}
+
+.resume p{
+    text-align: justify;
+    text-indent: 2rem;
 }
