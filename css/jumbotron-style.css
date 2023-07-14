@@ -1,0 +1,32 @@
+.jumbotron{
+    background: linear-gradient(0deg, rgba(17, 25, 40, 0.70) 0%, rgba(17, 25, 40, 0.70) 100%), url("../asset/jumbotron-background.jpg"), lightgray 50% / cover no-repeat;
+    background-size: cover;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+}
+
+.jumbotron-profile{
+    margin-top: 37px;
+    height: 160px;
+    width: 160px;
+    aspect-ratio: 1/1;
+}
+
+.jumbotron-fullname{
+    font-size: 60px;
+    font-weight: var(--extra-bold);
+    color: var(--white);
+}
+
+.jumbotron-icon{
+    display: flex;
+    margin-bottom: 160px;
+
+}
+
+.jumbotron-icon a{
+    padding: 0 15px 0 15px;
+}
