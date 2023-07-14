@@ -1,0 +1,8 @@
+.portfolio-wraper{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 25px;
+    justify-content: space-evenly;
+}
+

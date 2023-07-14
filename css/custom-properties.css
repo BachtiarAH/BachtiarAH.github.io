@@ -1,7 +1,9 @@
 :root {
-    --blue: #6495ed;
+    --blue: #1A56DB;
     --white: #fff;
     --background: #1E1E1E;
+    --background-card: #1F2A37;
+    --text: #fff;
 
     --extra-bold: 600;
 }
