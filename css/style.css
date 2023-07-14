@@ -146,6 +146,10 @@ body {
     color: var(--white);
 }
 
+.text-dark {
+    color: var(--text-dark);
+}
+
 section {
     width: 100%;
     padding: 75px;
@@ -156,6 +160,7 @@ section {
     color: white;
     font-weight: bold;
     text-transform: capitalize;
+    display: inline;
 }
 
 .sub-title {

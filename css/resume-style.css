@@ -1,0 +1,7 @@
+.resume{
+    display: flex;
+    justify-content: space-between;
+    gap: 170px;
+    align-items: start;
+    padding: 55px 0;
+}
