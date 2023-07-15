@@ -90,6 +90,8 @@ video {
     font-size: 100%;
     font: inherit;
     vertical-align: baseline;
+    color: white;
+    text-decoration: none;
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -153,7 +155,7 @@ body {
 
 
 section {
-    width: 100%;
+    /* width: ; */
     padding: 75px;
 }
 
