@@ -13,9 +13,10 @@
     <link rel="stylesheet" href="css/card-style.css" />
     <link rel="stylesheet" href="css/portfolio-style.css" />
     <link rel="stylesheet" href="css/button-style.css" />
-    <link rel="stylesheet" href="css/resume-style.css">
-    <link rel="stylesheet" href="css/blog-style.css">
-    <link rel="stylesheet" href="css/technology-style.css">
+    <link rel="stylesheet" href="css/resume-style.css" />
+    <link rel="stylesheet" href="css/blog-style.css" />
+    <link rel="stylesheet" href="css/technology-style.css" />
+    <link rel="stylesheet" href="css/nav-style.css" />
 
     <!-- iconify -->
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
@@ -42,86 +43,16 @@
   </head>
   <body>
     <!--  -->
-    <nav class="bg-white border-gray-200 dark:bg-gray-900">
-      <div
-        class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
-      >
-        <a href="#" class="flex items-center">
-          <div
-            class="w-[252px] h-9 justify-start items-center gap-3 inline-flex"
-          >
-            <div class="text-white text-2xl font-semibold leading-9">
-              BachtiarAH
-            </div>
-          </div>
-        </a>
-        <button
-          data-collapse-toggle="navbar-default"
-          type="button"
-          class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-          aria-controls="navbar-default"
-          aria-expanded="false"
-        >
-          <span class="sr-only">Open main menu</span>
-          <svg
-            class="w-5 h-5"
-            aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 17 14"
-          >
-            <path
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M1 1h15M1 7h15M1 13h15"
-            />
-          </svg>
-        </button>
-        <div class="hidden w-full md:block md:w-auto" id="navbar-default">
-          <ul
-            class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
-          >
-            <li>
-              <a
-                href="#"
-                class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500"
-                aria-current="page"
-                >Home</a
-              >
-            </li>
-            <li>
-              <a
-                href="#"
-                class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-                >About</a
-              >
-            </li>
-            <li>
-              <a
-                href="#"
-                class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-                >Services</a
-              >
-            </li>
-            <li>
-              <a
-                href="#"
-                class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-                >Pricing</a
-              >
-            </li>
-            <li>
-              <a
-                href="#"
-                class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-                >Contact</a
-              >
-            </li>
-          </ul>
-        </div>
-      </div>
+    <nav class="navbar">
+      <h1>Bachtiar Arya Habibie</h1>
+      <ul class="menu">
+        <li class="text"><a href="#">Home</a></li>
+        <li class="text"><a href="#">Projects</a></li>
+        <li class="text"><a href="#">Resume</a></li>
+        <li class="text"><a href="#">Blog</a></li>
+        <li class="text"><a href="#">Technology</a></li>
+        <li class="text"><a href="#">Contact</a></li>
+      </ul>
     </nav>
 
     <!-- jumbotron -->
@@ -135,7 +66,10 @@
         <p class="text">Here portfolio of Bachtiar Arya Habibie</p>
       </div>
       <div class="jumbotron-icon">
-        <a href="https://www.facebook.com/profile.php?id=100094053134165" target="_blank">
+        <a
+          href="https://www.facebook.com/profile.php?id=100094053134165"
+          target="_blank"
+        >
           <iconify-icon
             icon="ic:baseline-facebook"
             style="color: white"
@@ -149,7 +83,10 @@
             width="50"
           ></iconify-icon>
         </a>
-        <a href="https://www.linkedin.com/in/bachtiar-arya-habibie/" target="_blank">
+        <a
+          href="https://www.linkedin.com/in/bachtiar-arya-habibie/"
+          target="_blank"
+        >
           <iconify-icon
             icon="mdi:linkedin"
             style="color: white"
@@ -251,38 +188,60 @@
 
     <!-- resume -->
     <section class="resume">
-        <h2 class="h2">Resume</h2>
-        <p class="text-dark description">I am a dedicated student at Politeknik Negeri Jember, immersing myself in the world of Informatic Technology. Through numerous software development projects, I have gained invaluable experience and honed my skills. My expertise lies in creating impactful solutions for desktop, mobile, and web applications, driven by my passion for innovation and problem-solving.</p>
+      <h2 class="h2">Resume</h2>
+      <p class="text-dark description">
+        I am a dedicated student at Politeknik Negeri Jember, immersing myself
+        in the world of Informatic Technology. Through numerous software
+        development projects, I have gained invaluable experience and honed my
+        skills. My expertise lies in creating impactful solutions for desktop,
+        mobile, and web applications, driven by my passion for innovation and
+        problem-solving.
+      </p>
     </section>
 
     <!-- blog -->
     <section class="blog">
-        <h2 class="h2">recent Blog</h2>
-        <div class="blog-wraper">
-            <div class="big-blog-card">
-              <img src="Cuplikan layar 2022-12-18 020147.png" alt="">
-              <div class="content">
-                <h3 class="line-clamp-2">judul card besar rada panjang dikit</h3>
-                <p class="line-clamp-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus laudantium officiis facilis, dolore laboriosam molestiae harum corporis quod impedit nihil et commodi ducimus? Fugit temporibus quae culpa libero unde nulla.</p>
-              </div>
-            </div>
-            <div class="blog-wraper-second">
-              <div class="blog-card">
-                <img src="Cuplikan layar 2022-12-18 020147.png" alt="">
-                <div class="content">
-                  <h3 class="line-clamp-2">judul card besar rada panjang dikit</h3>
-                  <p class="line-clamp-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus laudantium officiis facilis, dolore laboriosam molestiae harum corporis quod impedit nihil et commodi ducimus? Fugit temporibus quae culpa libero unde nulla.</p>
-                </div>
-              </div>
-              <div class="blog-card">
-                <img src="Cuplikan layar 2022-12-18 020147.png" alt="">
-                <div class="content">
-                  <h3 class="line-clamp-2">judul card besar rada panjang dikit</h3>
-                  <p class="line-clamp-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus laudantium officiis facilis, dolore laboriosam molestiae harum corporis quod impedit nihil et commodi ducimus? Fugit temporibus quae culpa libero unde nulla.</p>
-                </div>
-              </div>
-            </div>
+      <h2 class="h2">recent Blog</h2>
+      <div class="blog-wraper">
+        <div class="big-blog-card">
+          <img src="Cuplikan layar 2022-12-18 020147.png" alt="" />
+          <div class="content">
+            <h3 class="line-clamp-2">judul card besar rada panjang dikit</h3>
+            <p class="line-clamp-3">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptatibus laudantium officiis facilis, dolore laboriosam
+              molestiae harum corporis quod impedit nihil et commodi ducimus?
+              Fugit temporibus quae culpa libero unde nulla.
+            </p>
+          </div>
         </div>
+        <div class="blog-wraper-second">
+          <div class="blog-card">
+            <img src="Cuplikan layar 2022-12-18 020147.png" alt="" />
+            <div class="content">
+              <h3 class="line-clamp-2">judul card besar rada panjang dikit</h3>
+              <p class="line-clamp-3">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptatibus laudantium officiis facilis, dolore laboriosam
+                molestiae harum corporis quod impedit nihil et commodi ducimus?
+                Fugit temporibus quae culpa libero unde nulla.
+              </p>
+            </div>
+          </div>
+          <div class="blog-card">
+            <img src="Cuplikan layar 2022-12-18 020147.png" alt="" />
+            <div class="content">
+              <h3 class="line-clamp-2">judul card besar rada panjang dikit</h3>
+              <p class="line-clamp-3">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptatibus laudantium officiis facilis, dolore laboriosam
+                molestiae harum corporis quod impedit nihil et commodi ducimus?
+                Fugit temporibus quae culpa libero unde nulla.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- technology -->
@@ -290,75 +249,147 @@
       <h2 class="h2">technology</h2>
       <ul class="list-tech">
         <li class="item-tech">
-          <iconify-icon icon="devicon:java-wordmark" width="100" height="100"></iconify-icon>
+          <iconify-icon
+            icon="devicon:java-wordmark"
+            width="100"
+            height="100"
+          ></iconify-icon>
           <p>java</p>
         </li>
         <li class="item-tech">
-          <iconify-icon icon="logos:javascript" width="100" height="100"></iconify-icon>
+          <iconify-icon
+            icon="logos:javascript"
+            width="100"
+            height="100"
+          ></iconify-icon>
           <p>java script</p>
         </li>
         <li class="item-tech">
-          <iconify-icon icon="devicon:php" width="100" height="100"></iconify-icon>
+          <iconify-icon
+            icon="devicon:php"
+            width="100"
+            height="100"
+          ></iconify-icon>
           <p>PHP</p>
         </li>
         <li class="item-tech">
-          <iconify-icon icon="logos:dart" width="100" height="100"></iconify-icon>
+          <iconify-icon
+            icon="logos:dart"
+            width="100"
+            height="100"
+          ></iconify-icon>
           <p>dart</p>
         </li>
         <li class="item-tech">
-          <iconify-icon icon="logos:laravel" width="100" height="100"></iconify-icon>
+          <iconify-icon
+            icon="logos:laravel"
+            width="100"
+            height="100"
+          ></iconify-icon>
           <p>laravel</p>
         </li>
         <li class="item-tech">
-          <iconify-icon icon="vscode-icons:file-type-tailwind" width="100" height="100"></iconify-icon>
+          <iconify-icon
+            icon="vscode-icons:file-type-tailwind"
+            width="100"
+            height="100"
+          ></iconify-icon>
           <p>tailwind</p>
         </li>
         <li class="item-tech">
-          <iconify-icon icon="logos:react" width="100" height="100"></iconify-icon>
+          <iconify-icon
+            icon="logos:react"
+            width="100"
+            height="100"
+          ></iconify-icon>
           <p>react</p>
         </li>
         <li class="item-tech">
-          <iconify-icon icon="logos:flutter" width="100" height="100"></iconify-icon>
+          <iconify-icon
+            icon="logos:flutter"
+            width="100"
+            height="100"
+          ></iconify-icon>
           <p>flutter</p>
         </li>
         <li class="item-tech">
-          <iconify-icon icon="devicon:android" width="100" height="100"></iconify-icon>
+          <iconify-icon
+            icon="devicon:android"
+            width="100"
+            height="100"
+          ></iconify-icon>
           <p>android</p>
         </li>
         <li class="item-tech">
-          <iconify-icon icon="cib:unity" width="100" height="100"></iconify-icon>
+          <iconify-icon
+            icon="cib:unity"
+            width="100"
+            height="100"
+          ></iconify-icon>
           <p>unity</p>
         </li>
         <li class="item-tech">
-          <iconify-icon icon="vscode-icons:file-type-html" width="100" height="100"></iconify-icon>
+          <iconify-icon
+            icon="vscode-icons:file-type-html"
+            width="100"
+            height="100"
+          ></iconify-icon>
           <p>HTML</p>
         </li>
         <li class="item-tech">
-          <iconify-icon icon="logos:nodejs" width="100" height="100"></iconify-icon>
+          <iconify-icon
+            icon="logos:nodejs"
+            width="100"
+            height="100"
+          ></iconify-icon>
           <p>nodejs</p>
         </li>
         <li class="item-tech">
-          <iconify-icon icon="logos:bootstrap" width="100" height="100"></iconify-icon>
+          <iconify-icon
+            icon="logos:bootstrap"
+            width="100"
+            height="100"
+          ></iconify-icon>
           <p>bootstrap</p>
         </li>
         <li class="item-tech">
-          <iconify-icon icon="logos:mysql" width="100" height="100"></iconify-icon>
+          <iconify-icon
+            icon="logos:mysql"
+            width="100"
+            height="100"
+          ></iconify-icon>
           <p>MySql</p>
         </li>
         <li class="item-tech">
-          <iconify-icon icon="logos:firebase" width="100" height="100"></iconify-icon>
+          <iconify-icon
+            icon="logos:firebase"
+            width="100"
+            height="100"
+          ></iconify-icon>
           <p>firebase</p>
         </li>
         <li class="item-tech">
-          <iconify-icon icon="ri:github-fill" width="100" height="100"></iconify-icon>
+          <iconify-icon
+            icon="ri:github-fill"
+            width="100"
+            height="100"
+          ></iconify-icon>
           <p>github</p>
         </li>
         <li class="item-tech">
-          <iconify-icon icon="logos:typescript-icon" width="100" height="100"></iconify-icon>
+          <iconify-icon
+            icon="logos:typescript-icon"
+            width="100"
+            height="100"
+          ></iconify-icon>
           <p>typescript</p>
         </li>
         <li class="item-tech">
-          <iconify-icon icon="logos:linux-tux" width="100" height="100"></iconify-icon>
+          <iconify-icon
+            icon="logos:linux-tux"
+            width="100"
+            height="100"
+          ></iconify-icon>
           <p>linux</p>
         </li>
       </ul>

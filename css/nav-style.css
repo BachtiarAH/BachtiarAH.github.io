@@ -1,0 +1,19 @@
+nav{
+    background-color: var(--background-card);
+    padding: 24px 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav h1{
+    color: var(--text);
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav .menu{
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+}
