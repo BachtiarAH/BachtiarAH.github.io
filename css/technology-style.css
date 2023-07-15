@@ -1,0 +1,14 @@
+.technology .list-tech{
+    margin: 100px;
+    padding: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+}
+
+.item-tech p{
+    color: var(--text);
+    text-align: center;
+}
+
