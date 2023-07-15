@@ -1,0 +1,55 @@
+footer{
+    
+    background-color: black;
+    padding: 50px 80px 18px 50px;
+}
+
+footer .menu{
+    display: flex;
+    justify-content: space-around;
+}
+
+.contact{
+    display: flex;
+    gap: 9px;
+}
+
+.contact .name{
+    font-size: 24px;
+    margin-bottom: 1rem;
+}
+
+.contact .description img{
+    flex-grow: 0;
+}
+
+.contact .description div{
+    display: flex;
+    justify-content: first baseline;
+    gap: 1rem;
+    line-height: 1.5rem;
+}
+
+.contact .description div p{
+    font-size: 20px;
+}
+
+/* menu */
+menu h3{
+    font-weight: bold;
+    font-size: 24px;
+    padding-bottom: 1rem;
+}
+
+menu ul li{
+    line-height: 1.5rem;
+}
+
+.copyright{
+    display: flex;
+    justify-content: space-between;
+}
+
+.copyright p a{
+    text-decoration: underline;
+}
