@@ -3,6 +3,7 @@
     justify-content: space-between;
     margin-top: 26px;
     margin-bottom: 55px;
+    flex-wrap: wrap;
 }
 
 .blog-wraper-second{
