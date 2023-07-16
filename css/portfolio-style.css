@@ -7,6 +7,11 @@
     margin-top: 2rem;
 }
 
+.portofolio .subtitle{
+    display: flex;
+    justify-content: start;
+}
+
 .portofolio{
     padding-bottom: 145px;
 }
