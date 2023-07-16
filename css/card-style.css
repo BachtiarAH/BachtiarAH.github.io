@@ -1,20 +1,19 @@
 .portfolio-card{
     border-radius: 8px;
-    width: 575px;
-    height: 258px;
+    max-width: 575px;
+    max-height: 258px;
     display: flex;
-    
 }
 
 .portfolio-card img{
     border-radius: 10px 0 0 10px;
-    max-width: 192px;
+    max-width: 33%;
     height: 100%;
 }
 
 .portfolio-card .content{
     border-radius: 0 10px 10px 0;
-    width: 384px;
+    width: 67%;
     height: 100%;
     background-color: var(--background-card);
     padding: 0 20px;
@@ -37,6 +36,13 @@
 
 .portfolio-card .icon{
     display: flex;
+    margin-bottom: 2rem;
+}
+
+@media (max-width:1000px){
+    .portfolio-card .content .icon{
+        margin-bottom: 0.5rem;
+    }
 }
 
 
