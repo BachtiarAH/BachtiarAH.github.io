@@ -1,5 +1,4 @@
 footer{
-    
     background-color: black;
     padding: 50px 80px 18px 50px;
 }
@@ -7,6 +6,8 @@ footer{
 footer .menu{
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
 }
 
 .contact{
