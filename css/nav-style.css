@@ -32,8 +32,8 @@ nav .top .nav-button {
 nav .mobile-menu {
     display: none;
     font-size: medium;
-    text-align: start;
-    padding: 1rem;
+    text-align: center;
+    padding: 0 4rem 1rem ;
 }
 
 @media (max-width: 1000px) {
