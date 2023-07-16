@@ -1,19 +1,61 @@
-nav{
+nav {
     background-color: var(--background-card);
+
+}
+
+nav .top {
     padding: 24px 80px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-nav h1{
+nav .top h1 {
     color: var(--text);
     font-size: 24px;
     font-weight: bold;
 }
 
-nav .menu{
+nav .top .menu {
     display: flex;
     justify-content: center;
     gap: 32px;
+}
+
+nav .top .nav-button {
+    border: none;
+    background-color: transparent;
+    color: var(--text);
+    display: none;
+}
+
+nav .mobile-menu {
+    display: none;
+    font-size: medium;
+    text-align: start;
+    padding: 1rem;
+}
+
+@media (max-width: 1000px) {
+    nav .top .menu {
+        display: none;
+    }
+
+    nav .top .nav-button {
+        display: block;
+    }
+
+    nav .mobile-menu {
+        display: none;
+        margin: 1px;
+        border-radius: 10px;
+    }
+
+    nav .mobile-menu li {
+        margin-top: 1rem;
+    }
+
+    nav .top{
+        padding: 0.5rem 1rem;
+    }
 }

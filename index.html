@@ -19,14 +19,38 @@
     <link rel="stylesheet" href="css/nav-style.css" />
     <link rel="stylesheet" href="css/footer-style.css" />
 
+    <!-- jquery -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+      integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <!-- iconify -->
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
   </head>
   <body>
     <!--  -->
     <nav class="navbar">
-      <h1>Bachtiar Arya Habibie</h1>
-      <ul class="menu">
+      <div class="top">
+        <h1>Bachtiar Arya Habibie</h1>
+        <ul class="menu">
+          <li class="text"><a href="#">Home</a></li>
+          <li class="text"><a href="#">Projects</a></li>
+          <li class="text"><a href="#">Resume</a></li>
+          <li class="text"><a href="#">Blog</a></li>
+          <li class="text"><a href="#">Technology</a></li>
+          <li class="text"><a href="#">Contact</a></li>
+        </ul>
+        <button id="nav-button" class="nav-button">
+          <iconify-icon
+            icon="iconamoon:menu-burger-horizontal-bold"
+            width="50"
+            height="50"
+          ></iconify-icon>
+        </button>
+      </div>
+      <ul class="mobile-menu">
         <li class="text"><a href="#">Home</a></li>
         <li class="text"><a href="#">Projects</a></li>
         <li class="text"><a href="#">Resume</a></li>
@@ -436,11 +460,20 @@
           </ul>
         </menu>
       </div>
-      <hr>
+      <hr />
       <div class="copyright">
         <p>Copyright © Bachtiar Arya Habibie 2023</p>
-        <p>Website design inspired by <a href="https://flowbite.com/">flowbite</a> by Bachtiar Arya Habibie</p>
+        <p>
+          Website design inspired by
+          <a href="https://flowbite.com/">flowbite</a> by Bachtiar Arya Habibie
+        </p>
       </div>
     </footer>
+
+    <script>
+      $("#nav-button").on("click", function () {
+        $(".mobile-menu").toggle();
+      });
+    </script>
   </body>
 </html>

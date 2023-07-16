@@ -143,6 +143,10 @@ body {
     letter-spacing: 0.5px;
 }
 
+.display-none{
+    display: none;
+}
+
 
 .text {
     color: var(--white);
