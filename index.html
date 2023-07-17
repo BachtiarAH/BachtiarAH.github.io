@@ -22,12 +22,21 @@
     <!-- jquery -->
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+      ;
       integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+      ;
       crossorigin="anonymous"
+      ;
       referrerpolicy="no-referrer"
+      ;
     ></script>
+
     <!-- iconify -->
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+
+    <!-- firebase -->
+    <script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-firestore-compat.js"></script>
   </head>
   <body>
     <!--  -->
@@ -52,15 +61,15 @@
       </div>
       <ul class="mobile-menu">
         <li class="text"><a href="#">Home</a></li>
-        <hr>
+        <hr />
         <li class="text"><a href="#">Projects</a></li>
-        <hr>
+        <hr />
         <li class="text"><a href="#">Resume</a></li>
-        <hr>
+        <hr />
         <li class="text"><a href="#">Blog</a></li>
-        <hr>
+        <hr />
         <li class="text"><a href="#">Technology</a></li>
-        <hr>
+        <hr />
         <li class="text"><a href="#">Contact</a></li>
       </ul>
     </nav>
@@ -131,65 +140,7 @@
         </svg>
       </a>
 
-      <div class="portfolio-wraper">
-        <div class="portfolio-card">
-          <img src="https://picsum.photos/200/258" alt="" />
-          <div class="content">
-            <div class="icon">
-              <iconify-icon
-                icon="circum:mobile-2"
-                style="color: white"
-                width="20"
-              ></iconify-icon>
-              <iconify-icon
-                icon="ph:desktop"
-                style="color: white"
-                width="20"
-              ></iconify-icon>
-              <iconify-icon
-                icon="mingcute:web-line"
-                style="color: white"
-                width="20"
-              ></iconify-icon>
-            </div>
-            <h3 class="title line-clamp-2">judul Card agak panjangan dikit</h3>
-            <p class="description line-clamp-3">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia
-              sint facilis ullam, explicabo repellat tempora similique deleniti
-              eveniet suscipit labore unde consequatur, accusantium animi quis
-              ducimus vel quos laudantium. Quaerat.
-            </p>
-          </div>
-        </div>
-        <div class="portfolio-card">
-          <img src="https://picsum.photos/200/258" alt="" />
-          <div class="content">
-            <div class="icon">
-              <iconify-icon
-                icon="circum:mobile-2"
-                style="color: white"
-                width="20"
-              ></iconify-icon>
-              <iconify-icon
-                icon="ph:desktop"
-                style="color: white"
-                width="20"
-              ></iconify-icon>
-              <iconify-icon
-                icon="mingcute:web-line"
-                style="color: white"
-                width="20"
-              ></iconify-icon>
-            </div>
-            <h3 class="title line-clamp-2">judul Card agak panjangan dikit</h3>
-            <p class="description line-clamp-3">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia
-              sint facilis ullam, explicabo repellat tempora similique deleniti
-              eveniet suscipit labore unde consequatur, accusantium animi quis
-              ducimus vel quos laudantium. Quaerat.
-            </p>
-          </div>
-        </div>
+      <div id="portfolio" class="portfolio-wraper"></div>
       </div>
     </section>
 
@@ -473,10 +424,41 @@
       </div>
     </footer>
 
+    <script src="js/component.js"></script>
+    <script type="module" src="js/firebase.js"></script>
+
     <script>
       $("#nav-button").on("click", function () {
         $(".mobile-menu").toggle();
       });
+    </script>
+
+    <script type="module">
+      // Initialize Cloud Firestore and get a reference to the service
+      const db = firebase.firestore();
+
+      // Retrieve all documents from a collection
+      db.collection("projects")
+        .get()
+        .then((querySnapshot) => {
+          querySnapshot.forEach((doc) => {
+            const projectData = doc.data();
+            let parentElement = document.getElementById("portfolio");
+            const card = createPortfolioCard(
+              parentElement,
+              projectData.title,
+              projectData.description,
+              projectData.image,
+              projectData.platform,
+              projectData.date,
+              projectData.status,
+              projectData.technology
+            );
+          });
+        })
+        .catch((error) => {
+          console.log("Error getting documents: ", error);
+        });
     </script>
   </body>
 </html>
