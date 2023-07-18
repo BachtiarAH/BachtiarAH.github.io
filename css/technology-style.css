@@ -1,10 +1,11 @@
 .technology .list-tech{
-    margin: 100px;
-    padding: auto;
+    margin-top: 3vh;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 50px;
+    gap: 3vh;
+    /* overflow-x: scroll;
+    scroll-snap-type: mandatory; */
 }
 
 .item-tech p{

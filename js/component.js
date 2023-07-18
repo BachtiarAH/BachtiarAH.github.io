@@ -35,7 +35,7 @@ function createPortfolioCard(
         iconify = "ph:desktop";
         break;
       case "website":
-        iconify = "mingcute:web-line";
+        iconify = "mdi:web";
         break;
       default:
         iconify = "ph:question";
