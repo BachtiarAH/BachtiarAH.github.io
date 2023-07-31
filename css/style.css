@@ -171,6 +171,15 @@ section {
     display: inline;
 }
 
+.h3 {
+    font-size: 28px; 
+    color: white;
+    font-weight: bold;
+    text-transform: capitalize;
+    display: inline;
+}
+
+
 .sub-title {
     display: flex;
     gap: 23px;
@@ -216,4 +225,21 @@ section {
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+
+.technology{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+}
+
+.technology  .tech-item{
+    padding: 3px 5px;
+    border-radius: 10px;
+    border: 1px white;
+    background-color: #27374D;
+    width: fit-content;
+    color: #DDE6ED;
 }

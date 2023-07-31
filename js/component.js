@@ -10,7 +10,7 @@ function createPortfolioCard(
 ) {
   // Create the parent div element
   const portfolioCard = document.createElement("div");
-  portfolioCard.classList.add("portfolio-card");
+  portfolioCard.classList.add("portfolio-item");
 
   // Create the image element
   const image = document.createElement("img");
@@ -21,31 +21,7 @@ function createPortfolioCard(
   const content = document.createElement("div");
   content.classList.add("content");
 
-  //create the icon element
-  const platformsWraper = document.createElement("div");
-  platformsWraper.classList.add("icon");
-  platforms.forEach((platform) => {
-    const icon = document.createElement("iconify-icon");
-    let iconify;
-    switch (platform) {
-      case "mobile":
-        iconify = "circum:mobile-2";
-        break;
-      case "desktop":
-        iconify = "ph:desktop";
-        break;
-      case "website":
-        iconify = "mdi:web";
-        break;
-      default:
-        iconify = "ph:question";
-        break;
-    }
-    icon.setAttribute("icon", iconify);
-    icon.setAttribute("style", "color: white");
-    icon.setAttribute("width", "20");
-    platformsWraper.appendChild(icon);
-  });
+  
 
   // Create the title element
   const titleElement = document.createElement("h3");
@@ -92,6 +68,7 @@ function createPortfolioCard(
  listTech.classList.add('technology');
  technologys.forEach(technology => {
     let techElement = document.createElement('li');
+    techElement.classList.add("tech-item")
     techElement.textContent = technology;
     listTech.appendChild(techElement)
  });
@@ -104,7 +81,7 @@ function createPortfolioCard(
   dateWrape.appendChild(document.createTextNode(" - "));
   dateWrape.appendChild(span2);
   dateWraper.appendChild(dateWrape);
-  content.appendChild(platformsWraper);
+
   content.appendChild(titleElement);
   content.appendChild(dateWraper);
   content.appendChild(descriptionElement);
