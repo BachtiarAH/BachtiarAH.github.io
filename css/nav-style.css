@@ -47,7 +47,6 @@ nav .mobile-menu {
     color: var(--text-blur);
 }
 
-
 @media (max-width: 1000px) {
     nav .top .menu {
         display: none;

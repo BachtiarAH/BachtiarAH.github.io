@@ -10,6 +10,11 @@
 
     <!-- font -->
     <link rel="stylesheet" href="css/font.css" />
+    
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Albert+Sans&family=Unbounded:wght@400;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="css/custom-properties.css" />
     <link rel="stylesheet" href="css/style.css" />
@@ -76,48 +81,12 @@
 
     <!-- jumbotron -->
     <header class="jumbotron">
-      <img class="jumbotron-profile" src="asset/Ellipse_me.png" alt="" />
+      <div class="jumbotron-img">
+        <img src="asset/me.jpg" alt="" />
+      </div>
       <div>
         <h1 class="jumbotron-fullname">Bachtiar Arya Habibie</h1>
-      </div>
-      <div>
-        <p class="text">Here portfolio of Bachtiar Arya Habibie</p>
-      </div>
-      <div class="jumbotron-icon">
-        <a
-          href="https://www.facebook.com/profile.php?id=100094053134165"
-          target="_blank"
-        >
-          <iconify-icon
-            icon="ic:baseline-facebook"
-            style="color: white"
-            width="50"
-          ></iconify-icon>
-        </a>
-        <a href="https://www.instagram.com/bachtiar.a.h/" target="_blank">
-          <iconify-icon
-            icon="mdi:instagram"
-            style="color: white"
-            width="50"
-          ></iconify-icon>
-        </a>
-        <a
-          href="https://www.linkedin.com/in/bachtiar-arya-habibie/"
-          target="_blank"
-        >
-          <iconify-icon
-            icon="mdi:linkedin"
-            style="color: white"
-            width="50"
-          ></iconify-icon>
-        </a>
-        <a href="https://github.com/BachtiarAH" target="_blank">
-          <iconify-icon
-            icon="mdi:github"
-            style="color: white"
-            width="50"
-          ></iconify-icon>
-        </a>
+        <p class="profesi">Software Engineer</p>
       </div>
     </header>
 
@@ -311,7 +280,7 @@
                 width="20"
                 height="20"
               ></iconify-icon>
-              <p>bachtiararyahabibie1@gmail.com</p>
+              <!-- <p>bachtiararyahabibie1@gmail.com</p> -->
             </div>
             <div>
               <iconify-icon
@@ -375,7 +344,7 @@
     <script>
       $("#nav-button").on("click", function () {
         $(".mobile-menu").toggle();
-        const icon = $('#nav-button-icon');
+        const icon = $("#nav-button-icon");
         var currentIcon = icon.attr("icon");
 
         if (currentIcon === "iconamoon:menu-burger-horizontal-thin") {
