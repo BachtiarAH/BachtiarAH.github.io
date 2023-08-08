@@ -1,6 +1,5 @@
 nav {
-    background-color: var(--background-card);
-
+    background-color: var(--white);
 }
 
 nav .top {
@@ -11,12 +10,14 @@ nav .top {
 }
 
 nav .top h1 {
-    color: var(--text);
-    font-size: 24px;
+    color: var(--secondary-accent-color);
+    font-size: 16px;
     font-weight: bold;
+    font-family: 'Inter';
 }
 
 nav .top .menu {
+    font-family: 'Inter';
     display: flex;
     justify-content: center;
     gap: 32px;
@@ -25,8 +26,13 @@ nav .top .menu {
 nav .top .nav-button {
     border: none;
     background-color: transparent;
-    color: var(--text);
+    color: var(--text-blury);
     display: none;
+}
+
+.menu .text a{
+    color: var(--text-blur);
+    font-family: 'Inter';
 }
 
 nav .mobile-menu {
@@ -36,6 +42,12 @@ nav .mobile-menu {
     padding: 0 4rem 1rem ;
 }
 
+.mobile-menu .text a{
+    font-family: 'Inter';
+    color: var(--text-blur);
+}
+
+
 @media (max-width: 1000px) {
     nav .top .menu {
         display: none;
@@ -43,6 +55,7 @@ nav .mobile-menu {
 
     nav .top .nav-button {
         display: block;
+        color: var(--text-blur);
     }
 
     nav .mobile-menu {
