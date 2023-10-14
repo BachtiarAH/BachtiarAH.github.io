@@ -28,6 +28,9 @@
     <link rel="stylesheet" href="css/nav-style.css" />
     <link rel="stylesheet" href="css/footer-style.css" />
 
+    <!-- script -->
+    <script src="js/utility.js"></script>
+
     <!-- jquery -->
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
@@ -49,38 +52,12 @@
   </head>
   <body>
     <!-- navbar -->
-    <nav class="navbar">
-      <div class="top">
-        <h1>Bachtiar Arya Habibie</h1>
-        <ul class="menu">
-          <li class="text"><a href="#">Home</a></li>
-          <li class="text"><a href="#">Projects</a></li>
-          <li class="text"><a href="#">Resume</a></li>
-          <li class="text"><a href="#">Blog</a></li>
-          <li class="text"><a href="#">Technology</a></li>
-          <li class="text"><a href="#">Contact</a></li>
-        </ul>
-        <button id="nav-button" class="nav-button">
-          <iconify-icon
-            id="nav-button-icon"
-            icon="iconamoon:menu-burger-horizontal-thin"
-            style="color: #666"
-            width="32"
-          ></iconify-icon>
-        </button>
-      </div>
-      <ul class="mobile-menu">
-        <li class="text"><a href="#">Home</a></li>
-        <li class="text"><a href="#">Projects</a></li>
-        <li class="text"><a href="#">Resume</a></li>
-        <li class="text"><a href="#">Blog</a></li>
-        <li class="text"><a href="#">Technology</a></li>
-        <li class="text"><a href="#">Contact</a></li>
-      </ul>
+    <nav id="navbar" class="navbar">
+      
     </nav>
 
     <!-- jumbotron -->
-    <header class="jumbotron">
+    <header id="home" class="jumbotron">
       <div class="jumbotron-img">
         <img src="asset/me.jpg" alt="" />
       </div>
@@ -91,7 +68,7 @@
     </header>
 
     <!-- resume -->
-    <section class="resume">
+    <section id="about" class="resume">
       <h2 class="h2-resume">About Me</h2>
       <p class="text-dark description">
         I am a dedicated student at Politeknik Negeri Jember, immersing myself
@@ -104,7 +81,7 @@
     </section>
 
     <!-- portfolio -->
-    <section class="portfolio-page">
+    <section id="projects" class="portfolio-page">
       <h2 class="h2">Projects</h2>
       <a href="#" class="btn flex">
         <p>more</p>
@@ -126,7 +103,7 @@
     </section>
 
     <!-- technology -->
-    <section class="technology">
+    <section id="tech" class="technology">
       <h2 class="h2">technology</h2>
       <ul class="list-tech">
         <li class="item-tech">
@@ -342,17 +319,7 @@
     <script type="module" src="js/firebase.js"></script>
 
     <script>
-      $("#nav-button").on("click", function () {
-        $(".mobile-menu").toggle();
-        const icon = $("#nav-button-icon");
-        var currentIcon = icon.attr("icon");
-
-        if (currentIcon === "iconamoon:menu-burger-horizontal-thin") {
-          icon.attr("icon", "ph:x-thin");
-        } else {
-          icon.attr("icon", "iconamoon:menu-burger-horizontal-thin");
-        }
-      });
+      $('#navbar').load('templates/universal/navbar.html');
     </script>
 
     <script type="module">
@@ -366,7 +333,7 @@
           querySnapshot.forEach((doc) => {
             const projectData = doc.data();
             let parentElement = document.getElementById("portfolio");
-
+            console.log(projectData);
             const card = createPortfolioCard(
               parentElement,
               projectData.title,
