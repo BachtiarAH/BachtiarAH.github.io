@@ -10,11 +10,14 @@
 
     <!-- font -->
     <link rel="stylesheet" href="css/font.css" />
-    
+
     <!-- google font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Albert+Sans&family=Unbounded:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Albert+Sans&family=Unbounded:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
 
     <link rel="stylesheet" href="css/custom-properties.css" />
     <link rel="stylesheet" href="css/style.css" />
@@ -52,9 +55,7 @@
   </head>
   <body>
     <!-- navbar -->
-    <nav id="navbar" class="navbar">
-      
-    </nav>
+    <nav id="navbar" class="navbar"></nav>
 
     <!-- jumbotron -->
     <header id="home" class="jumbotron">
@@ -105,143 +106,8 @@
     <!-- technology -->
     <section id="tech" class="technology">
       <h2 class="h2">technology</h2>
-      <ul class="list-tech">
-        <li class="item-tech">
-          <iconify-icon
-            icon="devicon:java-wordmark"
-            width="70"
-            height="70"
-          ></iconify-icon>
-          <p>java</p>
-        </li>
-        <li class="item-tech">
-          <iconify-icon
-            icon="logos:javascript"
-            width="70"
-            height="70"
-          ></iconify-icon>
-          <p>java script</p>
-        </li>
-        <li class="item-tech">
-          <iconify-icon
-            icon="devicon:php"
-            width="70"
-            height="70"
-          ></iconify-icon>
-          <p>PHP</p>
-        </li>
-        <li class="item-tech">
-          <iconify-icon icon="logos:dart" width="70" height="70"></iconify-icon>
-          <p>dart</p>
-        </li>
-        <li class="item-tech">
-          <iconify-icon
-            icon="logos:laravel"
-            width="70"
-            height="70"
-          ></iconify-icon>
-          <p>laravel</p>
-        </li>
-        <li class="item-tech">
-          <iconify-icon
-            icon="vscode-icons:file-type-tailwind"
-            width="70"
-            height="70"
-          ></iconify-icon>
-          <p>tailwind</p>
-        </li>
-        <li class="item-tech">
-          <iconify-icon
-            icon="logos:react"
-            width="70"
-            height="70"
-          ></iconify-icon>
-          <p>react</p>
-        </li>
-        <li class="item-tech">
-          <iconify-icon
-            icon="logos:flutter"
-            width="70"
-            height="70"
-          ></iconify-icon>
-          <p>flutter</p>
-        </li>
-        <li class="item-tech">
-          <iconify-icon
-            icon="devicon:android"
-            width="70"
-            height="70"
-          ></iconify-icon>
-          <p>android</p>
-        </li>
-        <li class="item-tech">
-          <iconify-icon icon="cib:unity" width="70" height="70"></iconify-icon>
-          <p>unity</p>
-        </li>
-        <li class="item-tech">
-          <iconify-icon
-            icon="vscode-icons:file-type-html"
-            width="70"
-            height="70"
-          ></iconify-icon>
-          <p>HTML</p>
-        </li>
-        <li class="item-tech">
-          <iconify-icon
-            icon="logos:nodejs"
-            width="70"
-            height="70"
-          ></iconify-icon>
-          <p>nodejs</p>
-        </li>
-        <li class="item-tech">
-          <iconify-icon
-            icon="logos:bootstrap"
-            width="70"
-            height="70"
-          ></iconify-icon>
-          <p>bootstrap</p>
-        </li>
-        <li class="item-tech">
-          <iconify-icon
-            icon="logos:mysql"
-            width="70"
-            height="70"
-          ></iconify-icon>
-          <p>MySql</p>
-        </li>
-        <li class="item-tech">
-          <iconify-icon
-            icon="logos:firebase"
-            width="70"
-            height="70"
-          ></iconify-icon>
-          <p>firebase</p>
-        </li>
-        <li class="item-tech">
-          <iconify-icon
-            icon="ri:github-fill"
-            width="70"
-            height="70"
-          ></iconify-icon>
-          <p>github</p>
-        </li>
-        <li class="item-tech">
-          <iconify-icon
-            icon="logos:typescript-icon"
-            width="70"
-            height="70"
-          ></iconify-icon>
-          <p>typescript</p>
-        </li>
-        <li class="item-tech">
-          <iconify-icon
-            icon="logos:linux-tux"
-            width="70"
-            height="70"
-          ></iconify-icon>
-          <p>linux</p>
-        </li>
+      <ul id="tech-list" class="list-tech">
+        
       </ul>
     </section>
 
@@ -319,7 +185,7 @@
     <script type="module" src="js/firebase.js"></script>
 
     <script>
-      $('#navbar').load('templates/universal/navbar.html');
+      $("#navbar").load("templates/universal/navbar.html");
     </script>
 
     <script type="module">
@@ -333,7 +199,6 @@
           querySnapshot.forEach((doc) => {
             const projectData = doc.data();
             let parentElement = document.getElementById("portfolio");
-            console.log(projectData);
             const card = createPortfolioCard(
               parentElement,
               projectData.title,
@@ -348,6 +213,28 @@
         })
         .catch((error) => {
           console.log("Error getting documents: ", error);
+        });
+
+
+      let list_tech = document.getElementById("tech-list");
+      const jsonFileUrl = "database/technology.json";
+
+      fetch(jsonFileUrl)
+        .then((response) => {
+          if (response.status === 200) {
+            return response.json(); // Parse the response as JSON
+          } else {
+            throw new Error("Failed to fetch data from the JSON file.");
+          }
+        })
+        .then((data) => {
+          data.map((value) => {
+            const tech_item = createTechnologyItem(value);
+            list_tech.appendChild(tech_item);
+          });
+        })
+        .catch((error) => {
+          console.error(error);
         });
     </script>
   </body>

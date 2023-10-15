@@ -21,8 +21,6 @@ function createPortfolioCard(
   const content = document.createElement("div");
   content.classList.add("content");
 
-  
-
   // Create the title element
   const titleElement = document.createElement("h3");
   titleElement.classList.add("title", "line-clamp-2");
@@ -43,7 +41,7 @@ function createPortfolioCard(
     month: "short",
     year: "numeric",
   });
-  span1.textContent = formattedStartDate
+  span1.textContent = formattedStartDate;
 
   const span2 = document.createElement("span");
   var endDate = new Date(
@@ -56,25 +54,20 @@ function createPortfolioCard(
   });
   span2.textContent = status == "complete" ? formattedEndDate : "current";
 
-  
-
   // Create the description element
   const descriptionElement = document.createElement("p");
   descriptionElement.classList.add("description", "line-clamp-3");
   descriptionElement.textContent = description;
 
- //create list technology
- const listTech = document.createElement('ul');
- listTech.classList.add('technology');
- technologys.forEach(technology => {
-    let techElement = document.createElement('li');
-    techElement.classList.add("tech-item")
+  //create list technology
+  const listTech = document.createElement("ul");
+  listTech.classList.add("technology");
+  technologys.forEach((technology) => {
+    let techElement = document.createElement("li");
+    techElement.classList.add("tech-item");
     techElement.textContent = technology;
-    listTech.appendChild(techElement)
- });
-
-
-
+    listTech.appendChild(techElement);
+  });
 
   // Append child elements to their respective parents
   dateWrape.appendChild(span1);
@@ -92,4 +85,34 @@ function createPortfolioCard(
   // Append the portfolio card to the parent element
   parentElement.appendChild(portfolioCard);
   return portfolioCard;
+}
+
+/**
+ * Create a technology list item element.
+ *
+ * @param {Object} techObj - An object containing technology information.
+ * @param {string} techObj.icon - The icon name for the technology.
+ * @param {string} techObj.name - The label or name of the technology.
+ * @returns {HTMLLIElement} - A list item element representing the technology.
+ */
+function createTechnologyItem(techObj) {
+  //make list
+  let li = document.createElement("li");
+  li.classList.add('item-tech');
+
+  //make iconify element
+  let iconify_icon = document.createElement("iconify-icon");
+  iconify_icon.setAttribute('icon',techObj.icon);
+  iconify_icon.setAttribute('width',70);
+  iconify_icon.setAttribute('height',70);
+
+  //make label for the item
+  let label = document.createElement('p');
+  label.innerHTML = techObj.label
+
+  //append to the parent
+  li.appendChild(iconify_icon);
+  li.appendChild(label);
+
+  return li;
 }
