@@ -6,45 +6,27 @@
     "description": "Muarambaduk is a multifunctional platform designed for both mobile and web users. This versatile solution offers a wide range of features and services, catering to diverse user needs. Explore the world of Muarambaduk and discover how it can enhance your digital experience."
   },
   {
-    "image": "assets/img/projects/meuble-ecomers.png",
-    "title": "Meuable Ecomers",
-    "platform": ["mobile", "web"],
-    "description": "Meuble Ecomers is a cutting-edge e-commerce solution designed to revolutionize the way people shop for furniture and home decor. With its seamless integration on both mobile and web platforms, this platform offers a vast array of high-quality furniture and home accessory products for consumers. Whether you're furnishing your dream home or looking for the perfect accent piece, Meuble Ecomers is your one-stop destination. Discover a world of style, comfort, and inspiration, and turn your house into a home with our extensive collection. Explore our user-friendly website or mobile app to browse, shop, and elevate your living space with Meuble Ecomers today!"
+    "image":"assets/img/projects/weddintinvt.png",
+    "title":"Wedding Invitation",
+    "platform":["web"],
+    "description":"The Wedding Invitation Web App is an elegant and user-friendly platform designed to help couples create and manage their wedding invitations with ease. This web application offers a range of features to simplify the invitation process and provide a memorable experience for both the couple and their guests."
   },
   {
-    "image": "assets/img/projects/quantumcraft.png",
-    "title": "QuantumCraft",
-    "platform": ["game", "desktop", "iot"],
-    "description": "QuantumCraft is an immersive video game that blends quantum physics with thrilling adventures. Dive into the fascinating world of quantum mechanics as you solve puzzles, uncover secrets, and craft your way to victory. Available on desktop, gaming consoles, and even compatible with IoT devices, QuantumCraft offers an unparalleled gaming experience that pushes the boundaries of both entertainment and education."
+    "image":"assets/img/projects/telemedicine.png",
+    "title":"Telemedicine",
+    "platform":["web"],
+    "description":"The Telemedicine Website Application is a comprehensive online platform that revolutionizes healthcare access by enabling patients to connect with medical professionals from the comfort of their own homes. Built on the Laravel framework, this web application offers a wide range of features to provide seamless and secure telemedicine services."
   },
   {
-    "image": "assets/img/projects/healthhub-ai.jpg",
-    "title": "HealthHub AI",
-    "platform": ["mobile", "web", "ai"],
-    "description": "HealthHub AI is a comprehensive healthcare solution powered by artificial intelligence. It seamlessly integrates across mobile and web platforms to provide users with personalized health insights, medical recommendations, and monitoring. This innovative AI-driven system empowers individuals to take control of their well-being like never before, making informed health decisions accessible to everyone."
+    "image":"assets/img/projects/mmagym.png",
+    "title":"MMA GYM",
+    "platform":["web","mobile"],
+    "description":"AMMGYM is your all-in-one fitness companion, available as both a website and a mobile app, designed to help you achieve your fitness goals with a comprehensive library of exercises and workout plans. Whether you're a gym novice or an experienced fitness enthusiast, AMMGYM provides you with the tools and guidance to make the most out of your workouts."
   },
   {
-    "image": "assets/img/projects/ecosense.png",
-    "title": "EcoSense",
-    "platform": ["mobile", "web", "iot"],
-    "description": "EcoSense is an eco-conscious application that connects with IoT devices to monitor and optimize energy usage in homes and businesses. Available on mobile and web, it allows users to track their environmental impact and make informed decisions to reduce energy consumption, thereby contributing to a more sustainable future."
-  },
-  {
-    "image": "assets/img/projects/retrorush.png",
-    "title": "RetroRush",
-    "platform": ["game", "mobile", "desktop"],
-    "description": "RetroRush is an exciting arcade-style game that takes players on a nostalgia-filled journey. Playable on mobile devices and desktop computers, this retro-inspired game promises hours of fun. Challenge your reflexes, collect power-ups, and race to beat high scores in a pixelated world of adventure."
-  },
-  {
-    "image": "assets/img/projects/officepal.png",
-    "title": "OfficePal",
-    "platform": ["mobile", "web", "desktop"],
-    "description": "OfficePal is a productivity and team collaboration tool that simplifies work management. Accessible on mobile, web, and desktop, it provides a unified platform for teams to collaborate, manage tasks, and streamline office operations. Boost efficiency and stay organized with OfficePal."
-  },
-  {
-    "image": "assets/img/projects/robopet.png",
-    "title": "RoboPet",
-    "platform": ["iot", "ai", "game"],
-    "description": "RoboPet is an innovative combination of robotics, artificial intelligence, and gaming. It features a cute robotic pet companion that interacts with users via AI and IoT technologies. The AI-driven pet is also a character in an engaging game, blurring the lines between virtual and real-life interactions for a unique entertainment experience."
+    "image":"assets/img/projects/lafo.png",
+    "title":"LAFO",
+    "platform":["desktop"],
+    "description":" desktop application for Cafe Lafo in Jember, East Java. The application aimed to optimize operational efficiency and elevate the customer experience. Integrated a robust database system to manage inventory, sales reporting, and the point-of-sale system, enhancing the ordering process and providing valuable insights through sales reports. "
   }
 ]

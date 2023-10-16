@@ -10,7 +10,7 @@
 
 .selected-baner {
     position: relative;
-    height: 56vh;
+    height: 68vh;
     width: 100%;
 
 }
@@ -37,7 +37,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 35px 50px;
+    padding: 2% 2%;
     width: 100%;
     height: 100%;
     box-sizing: border-box;
@@ -66,10 +66,17 @@
     line-height: 125%;
 }
 
+.line-clamp-4 {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4; /* Adjust this value to set the maximum number of lines */
+    overflow: hidden;
+}
+
 
 .project-nav {
     width: 100%;
-    height: 20vh;
+    height: 19vh;
     position: relative;
     border: 1px white solid;
 }
@@ -104,10 +111,10 @@
 }
 
 .project-item {
-    width: 287px;
-    height: 126px;
+    height: 80%;
     flex-shrink: 0;
     background-color: aquamarine;
+    aspect-ratio: 2/1;
 }
 
 .project-item:active {
@@ -136,8 +143,6 @@
     border-bottom: 1px solid white;
 
 }
-
-
 
 
 .portfolio-item img {
@@ -187,4 +192,9 @@
         /* flex-direction: center; */
         justify-content: center;
     }
+    
+    .selected-baner-title{
+        font-size: 32px;
+    }
+
 }
