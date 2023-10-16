@@ -1,0 +1,115 @@
+<h2 class="h2">My Recent Portfolio</h2>
+<div id="portfolio" class="portfolio-wraper">
+  <div id="selected-baner" class="selected-baner">
+    <div class="selected-baner-overlay">
+      <div class="selected-baner-caption">
+        <div>
+          <h3 class="selected-baner-title">Nama Project</h3>
+          <div class="selected-baner-platform">
+            <iconify-icon icon="circum:mobile-2" width="35"></iconify-icon>
+            <iconify-icon icon="ph:desktop" width="35"></iconify-icon>
+            <iconify-icon icon="mingcute:web-fill" width="35"></iconify-icon>
+          </div>
+        </div>
+        <p class="selected-baner-summary">
+          I led the development team in the "TechMart" project, an e-commerce
+          application that showcases advanced technology and provides an
+          exceptional online shopping experience. In this project, my primary
+          responsibility was to design, develop, and manage the entire software
+          lifecycle from inception to launch, ensuring that the application
+          could handle high traffic, maintain top-tier security, and deliver
+          optimal performance.
+        </p>
+      </div>
+    </div>
+    <img
+      class="selected-baner-conten"
+      src="assets/img/projects/muarambaduk.png"
+      alt=""
+    />
+  </div>
+  <nav class="project-nav">
+    <button class="project-nav-button-left"></button>
+    <ul id="project-ul" class="project-list">
+      <!-- will filled with element using js DOM -->
+    </ul>
+    <button class="project-nav-button-right"></button>
+  </nav>
+</div>
+
+<script type="module">
+  let projectUl = document.getElementById("project-ul");
+
+  const projectJsonUrl = "database/projects.json";
+  const iconUrl = "database/icon.json";
+
+  function handleClick(element,project) {
+    //get the element
+    let selectedBanner = document.getElementById("selected-baner");
+    let banerTitle = selectedBanner.getElementsByClassName(
+      "selected-baner-title"
+    )[0];
+    let banerSumary = selectedBanner.getElementsByClassName(
+      "selected-baner-summary"
+    )[0];
+    let banerPlatform = selectedBanner.getElementsByClassName(
+      "selected-baner-platform"
+    )[0];
+    let bannerImage = selectedBanner.getElementsByClassName(
+      "selected-baner-conten"
+    )[0];
+    let icon = null;
+
+    while (banerPlatform.firstChild) {
+      banerPlatform.removeChild(banerPlatform.firstChild);
+    }
+
+    //set the data with clicked data
+    banerTitle.innerHTML = project.title;
+    banerSumary.innerHTML = project.description;
+    bannerImage.src = project.image;
+
+    fetch(iconUrl)
+      .then((response) => {
+        if (response.status === 200) {
+          return response.json(); // Parse the response as JSON
+        } else {
+          throw new Error("Failed to fetch data from the JSON file.");
+        }
+      })
+      .then((icon) => {
+        project.platform.map((data) => {
+          const platformItem = document.createElement("iconify-icon");
+          platformItem.setAttribute("icon", icon[data]);
+          platformItem.setAttribute("width", 35);
+
+          banerPlatform.appendChild(platformItem);
+        });
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+
+      console.log(element);
+  }
+
+  fetch(projectJsonUrl)
+    .then((response) => {
+      if (response.status === 200) {
+        return response.json(); // Parse the response as JSON
+      } else {
+        throw new Error("Failed to fetch data from the JSON file.");
+      }
+    })
+    .then((data) => {
+      data.map((value, key) => {
+        const projectLi = createProjectNavItem(value.image, () =>
+          handleClick(projectLi, value)
+        );
+        projectUl.appendChild(projectLi);
+      });
+    })
+    .catch((error) => {
+      console.error(error);
+    });
+</script>

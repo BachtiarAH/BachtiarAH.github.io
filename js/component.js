@@ -116,3 +116,29 @@ function createTechnologyItem(techObj) {
 
   return li;
 }
+
+/**
+ * Creates a project navigation item (li element) with an image.
+ *
+ * @param {string} imgSrc - The source URL of the image to be displayed.
+ * @returns {HTMLLIElement} The generated list item (li) element with the image.
+ */
+function createProjectNavItem(image, onClick = null) {
+  //create li
+  let li = document.createElement("li");
+  li.classList.add("project-item");
+  // Set the click event handler if provided
+  if (onClick) {
+    li.addEventListener("click", onClick);
+  }
+
+  //crete img
+  let img = document.createElement("img");
+  img.classList.add("project-item-img");
+  img.src = image;
+
+  li.appendChild(img);
+
+  return li;
+  
+}
