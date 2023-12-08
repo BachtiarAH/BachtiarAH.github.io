@@ -4,7 +4,7 @@
     <div class="selected-baner-overlay">
       <div class="selected-baner-caption">
         <div>
-          <h3 class="selected-baner-title">Nama Project</h3>
+          <h3 class="selected-baner-title">muarambaduk</h3>
           <div class="selected-baner-platform">
             <iconify-icon icon="circum:mobile-2" width="35"></iconify-icon>
             <iconify-icon icon="ph:desktop" width="35"></iconify-icon>
@@ -12,13 +12,7 @@
           </div>
         </div>
         <p class="selected-baner-summary line-clamp-4">
-          I led the development team in the "TechMart" project, an e-commerce
-          application that showcases advanced technology and provides an
-          exceptional online shopping experience. In this project, my primary
-          responsibility was to design, develop, and manage the entire software
-          lifecycle from inception to launch, ensuring that the application
-          could handle high traffic, maintain top-tier security, and deliver
-          optimal performance.
+          Muarambaduk is a multifunctional platform designed for both mobile and web users. This versatile solution offers a wide range of features and services, catering to diverse user needs. Explore the world of Muarambaduk and discover how it can enhance your digital experience.
         </p>
       </div>
     </div>
@@ -43,7 +37,7 @@
   const projectJsonUrl = "database/projects.json";
   const iconUrl = "database/icon.json";
 
-  function handleClick(element,project) {
+  function changeSelectedBaner(element, project) {
     //get the element
     let selectedBanner = document.getElementById("selected-baner");
     let banerTitle = selectedBanner.getElementsByClassName(
@@ -90,7 +84,7 @@
         console.error(error);
       });
 
-      console.log(element);
+    console.log(element);
   }
 
   fetch(projectJsonUrl)
@@ -104,12 +98,41 @@
     .then((data) => {
       data.map((value, key) => {
         const projectLi = createProjectNavItem(value.image, () =>
-          handleClick(projectLi, value)
+          changeSelectedBaner(projectLi, value)
         );
         projectUl.appendChild(projectLi);
+        if (key == 0) {
+          changeSelectedBaner(projectLi, value);
+        }
       });
     })
     .catch((error) => {
       console.error(error);
     });
+
+  document.addEventListener("DOMContentLoaded", function () {
+    // Your code here
+    const projectNav = document.querySelector(".project-list");
+    enableCustomSliderBehavior(projectNav);
+  });
+
+  let lastKnownScrollPosition = 0;
+  let ticking = false;
+
+  function doSomething(scrollPos) {
+    console.log(scrollPos);
+  }
+
+  document.addEventListener("scroll", (event) => {
+    lastKnownScrollPosition = window.scrollY;
+
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        doSomething(lastKnownScrollPosition);
+        ticking = false;
+      });
+
+      ticking = true;
+    }
+  });
 </script>
