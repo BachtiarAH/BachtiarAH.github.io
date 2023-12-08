@@ -7,6 +7,18 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
 
     <title>BachtiarAH</title>
+
+    <!-- font -->
+    <link rel="stylesheet" href="css/font.css" />
+
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Albert+Sans&family=Unbounded:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="css/custom-properties.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/jumbotron-style.css" />
@@ -18,6 +30,9 @@
     <link rel="stylesheet" href="css/technology-style.css" />
     <link rel="stylesheet" href="css/nav-style.css" />
     <link rel="stylesheet" href="css/footer-style.css" />
+
+    <!-- script -->
+    <script src="js/utility.js"></script>
 
     <!-- jquery -->
     <script
@@ -39,91 +54,23 @@
     <script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-firestore-compat.js"></script>
   </head>
   <body>
-    <!--  -->
-    <nav class="navbar">
-      <div class="top">
-        <h1>Bachtiar Arya Habibie</h1>
-        <ul class="menu">
-          <li class="text"><a href="#">Home</a></li>
-          <li class="text"><a href="#">Projects</a></li>
-          <li class="text"><a href="#">Resume</a></li>
-          <li class="text"><a href="#">Blog</a></li>
-          <li class="text"><a href="#">Technology</a></li>
-          <li class="text"><a href="#">Contact</a></li>
-        </ul>
-        <button id="nav-button" class="nav-button">
-          <iconify-icon
-            icon="iconamoon:menu-burger-horizontal-bold"
-            width="50"
-            height="50"
-          ></iconify-icon>
-        </button>
-      </div>
-      <ul class="mobile-menu">
-        <li class="text"><a href="#">Home</a></li>
-        <hr />
-        <li class="text"><a href="#">Projects</a></li>
-        <hr />
-        <li class="text"><a href="#">Resume</a></li>
-        <hr />
-        <li class="text"><a href="#">Blog</a></li>
-        <hr />
-        <li class="text"><a href="#">Technology</a></li>
-        <hr />
-        <li class="text"><a href="#">Contact</a></li>
-      </ul>
-    </nav>
+    <!-- navbar -->
+    <nav id="navbar" class="navbar"></nav>
 
     <!-- jumbotron -->
-    <header class="jumbotron">
-      <img class="jumbotron-profile" src="asset/Ellipse_me.png" alt="" />
+    <header id="home" class="jumbotron">
+      <div class="jumbotron-img">
+        <img src="asset/me.jpg" alt="" />
+      </div>
       <div>
         <h1 class="jumbotron-fullname">Bachtiar Arya Habibie</h1>
-      </div>
-      <div>
-        <p class="text">Here portfolio of Bachtiar Arya Habibie</p>
-      </div>
-      <div class="jumbotron-icon">
-        <a
-          href="https://www.facebook.com/profile.php?id=100094053134165"
-          target="_blank"
-        >
-          <iconify-icon
-            icon="ic:baseline-facebook"
-            style="color: white"
-            width="50"
-          ></iconify-icon>
-        </a>
-        <a href="https://www.instagram.com/bachtiar.a.h/" target="_blank">
-          <iconify-icon
-            icon="mdi:instagram"
-            style="color: white"
-            width="50"
-          ></iconify-icon>
-        </a>
-        <a
-          href="https://www.linkedin.com/in/bachtiar-arya-habibie/"
-          target="_blank"
-        >
-          <iconify-icon
-            icon="mdi:linkedin"
-            style="color: white"
-            width="50"
-          ></iconify-icon>
-        </a>
-        <a href="https://github.com/BachtiarAH" target="_blank">
-          <iconify-icon
-            icon="mdi:github"
-            style="color: white"
-            width="50"
-          ></iconify-icon>
-        </a>
+        <p class="profesi">Software Engineer</p>
       </div>
     </header>
 
     <!-- resume -->
-    <section class="resume">
-      <h2 class="h2">Resume</h2>
+    <section id="about" class="resume">
+      <h2 class="h2-resume">About Me</h2>
       <p class="text-dark description">
         I am a dedicated student at Politeknik Negeri Jember, immersing myself
         in the world of Informatic Technology. Through numerous software
@@ -135,286 +82,26 @@
     </section>
 
     <!-- portfolio -->
-    <section class="portfolio-page">
-      <h2 class="h2">Projects</h2>
-      <a href="#" class="btn flex">
-        <p>more</p>
-        <svg
-          width="16"
-          height="16"
-          viewBox="0 0 16 16"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M13.9348 8.35608C13.9996 8.18593 14.0166 7.99869 13.9835 7.81807C13.9504 7.63744 13.8687 7.47153 13.7487 7.34135L10.32 3.61754C10.2409 3.52862 10.1463 3.4577 10.0417 3.40891C9.93713 3.36012 9.82465 3.33444 9.71083 3.33336C9.59701 3.33229 9.48414 3.35584 9.37879 3.40265C9.27344 3.44946 9.17774 3.51859 9.09725 3.606C9.01677 3.69341 8.95312 3.79735 8.91002 3.91176C8.86692 4.02617 8.84523 4.14876 8.84622 4.27237C8.84721 4.39598 8.87085 4.51814 8.91578 4.63172C8.9607 4.7453 9.02601 4.84803 9.10788 4.9339L11.0743 7.06951H2.8572C2.62985 7.06951 2.41182 7.16759 2.25107 7.34218C2.09031 7.51677 2 7.75356 2 8.00046C2 8.24736 2.09031 8.48416 2.25107 8.65874C2.41182 8.83333 2.62985 8.93141 2.8572 8.93141H11.0743L9.10874 11.0661C9.02686 11.152 8.96156 11.2547 8.91664 11.3683C8.87171 11.4818 8.84806 11.604 8.84707 11.7276C8.84609 11.8512 8.86777 11.9738 8.91088 12.0882C8.95398 12.2026 9.01763 12.3066 9.09811 12.394C9.1786 12.4814 9.2743 12.5505 9.37965 12.5973C9.485 12.6441 9.59787 12.6677 9.71169 12.6666C9.82551 12.6656 9.93799 12.6399 10.0426 12.5911C10.1472 12.5423 10.2417 12.4714 10.3208 12.3825L13.7496 8.65864C13.829 8.57197 13.8919 8.46916 13.9348 8.35608Z"
-            fill="white"
-          />
-        </svg>
-      </a>
-
-      <div id="portfolio" class="portfolio-wraper">
-        
-      </div>
+    <section id="projects" class="portfolio-page">
+      
 
       
     </section>
 
-    <!-- blog -->
-    <!-- <section class="blog">
-      <h2 class="h2">recent Blog</h2>
-      <a href="#" class="btn flex">
-        <p>more</p>
-        <svg
-          width="16"
-          height="16"
-          viewBox="0 0 16 16"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M13.9348 8.35608C13.9996 8.18593 14.0166 7.99869 13.9835 7.81807C13.9504 7.63744 13.8687 7.47153 13.7487 7.34135L10.32 3.61754C10.2409 3.52862 10.1463 3.4577 10.0417 3.40891C9.93713 3.36012 9.82465 3.33444 9.71083 3.33336C9.59701 3.33229 9.48414 3.35584 9.37879 3.40265C9.27344 3.44946 9.17774 3.51859 9.09725 3.606C9.01677 3.69341 8.95312 3.79735 8.91002 3.91176C8.86692 4.02617 8.84523 4.14876 8.84622 4.27237C8.84721 4.39598 8.87085 4.51814 8.91578 4.63172C8.9607 4.7453 9.02601 4.84803 9.10788 4.9339L11.0743 7.06951H2.8572C2.62985 7.06951 2.41182 7.16759 2.25107 7.34218C2.09031 7.51677 2 7.75356 2 8.00046C2 8.24736 2.09031 8.48416 2.25107 8.65874C2.41182 8.83333 2.62985 8.93141 2.8572 8.93141H11.0743L9.10874 11.0661C9.02686 11.152 8.96156 11.2547 8.91664 11.3683C8.87171 11.4818 8.84806 11.604 8.84707 11.7276C8.84609 11.8512 8.86777 11.9738 8.91088 12.0882C8.95398 12.2026 9.01763 12.3066 9.09811 12.394C9.1786 12.4814 9.2743 12.5505 9.37965 12.5973C9.485 12.6441 9.59787 12.6677 9.71169 12.6666C9.82551 12.6656 9.93799 12.6399 10.0426 12.5911C10.1472 12.5423 10.2417 12.4714 10.3208 12.3825L13.7496 8.65864C13.829 8.57197 13.8919 8.46916 13.9348 8.35608Z"
-            fill="white"
-          />
-        </svg>
-      </a>
-      <div class="portfolio-wraper">
-        <div class="portfolio-card">
-          <img src="https://picsum.photos/200/258" alt="" />
-          <div class="content">
-            <h3 class="title line-clamp-2">judul Card agak panjangan dikit</h3>
-            <p class="description line-clamp-3">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia
-              sint facilis ullam, explicabo repellat tempora similique deleniti
-              eveniet suscipit labore unde consequatur, accusantium animi quis
-              ducimus vel quos laudantium. Quaerat.
-            </p>
-          </div>
-        </div>
-        <div class="portfolio-card">
-          <img src="https://picsum.photos/200/258" alt="" />
-          <div class="content">
-            <h3 class="title line-clamp-2">judul Card agak panjangan dikit</h3>
-            <p class="description line-clamp-3">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia
-              sint facilis ullam, explicabo repellat tempora similique deleniti
-              eveniet suscipit labore unde consequatur, accusantium animi quis
-              ducimus vel quos laudantium. Quaerat.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section> -->
-
     <!-- technology -->
-    <section class="technology">
+    <section id="tech" class="technology">
       <h2 class="h2">technology</h2>
-      <ul class="list-tech">
-        <li class="item-tech">
-          <iconify-icon
-            icon="devicon:java-wordmark"
-            width="70"
-            height="70"
-          ></iconify-icon>
-          <p>java</p>
-        </li>
-        <li class="item-tech">
-          <iconify-icon
-            icon="logos:javascript"
-            width="70"
-            height="70"
-          ></iconify-icon>
-          <p>java script</p>
-        </li>
-        <li class="item-tech">
-          <iconify-icon
-            icon="devicon:php"
-            width="70"
-            height="70"
-          ></iconify-icon>
-          <p>PHP</p>
-        </li>
-        <li class="item-tech">
-          <iconify-icon icon="logos:dart" width="70" height="70"></iconify-icon>
-          <p>dart</p>
-        </li>
-        <li class="item-tech">
-          <iconify-icon
-            icon="logos:laravel"
-            width="70"
-            height="70"
-          ></iconify-icon>
-          <p>laravel</p>
-        </li>
-        <li class="item-tech">
-          <iconify-icon
-            icon="vscode-icons:file-type-tailwind"
-            width="70"
-            height="70"
-          ></iconify-icon>
-          <p>tailwind</p>
-        </li>
-        <li class="item-tech">
-          <iconify-icon
-            icon="logos:react"
-            width="70"
-            height="70"
-          ></iconify-icon>
-          <p>react</p>
-        </li>
-        <li class="item-tech">
-          <iconify-icon
-            icon="logos:flutter"
-            width="70"
-            height="70"
-          ></iconify-icon>
-          <p>flutter</p>
-        </li>
-        <li class="item-tech">
-          <iconify-icon
-            icon="devicon:android"
-            width="70"
-            height="70"
-          ></iconify-icon>
-          <p>android</p>
-        </li>
-        <li class="item-tech">
-          <iconify-icon icon="cib:unity" width="70" height="70"></iconify-icon>
-          <p>unity</p>
-        </li>
-        <li class="item-tech">
-          <iconify-icon
-            icon="vscode-icons:file-type-html"
-            width="70"
-            height="70"
-          ></iconify-icon>
-          <p>HTML</p>
-        </li>
-        <li class="item-tech">
-          <iconify-icon
-            icon="logos:nodejs"
-            width="70"
-            height="70"
-          ></iconify-icon>
-          <p>nodejs</p>
-        </li>
-        <li class="item-tech">
-          <iconify-icon
-            icon="logos:bootstrap"
-            width="70"
-            height="70"
-          ></iconify-icon>
-          <p>bootstrap</p>
-        </li>
-        <li class="item-tech">
-          <iconify-icon
-            icon="logos:mysql"
-            width="70"
-            height="70"
-          ></iconify-icon>
-          <p>MySql</p>
-        </li>
-        <li class="item-tech">
-          <iconify-icon
-            icon="logos:firebase"
-            width="70"
-            height="70"
-          ></iconify-icon>
-          <p>firebase</p>
-        </li>
-        <li class="item-tech">
-          <iconify-icon
-            icon="ri:github-fill"
-            width="70"
-            height="70"
-          ></iconify-icon>
-          <p>github</p>
-        </li>
-        <li class="item-tech">
-          <iconify-icon
-            icon="logos:typescript-icon"
-            width="70"
-            height="70"
-          ></iconify-icon>
-          <p>typescript</p>
-        </li>
-        <li class="item-tech">
-          <iconify-icon
-            icon="logos:linux-tux"
-            width="70"
-            height="70"
-          ></iconify-icon>
-          <p>linux</p>
-        </li>
+      <ul id="tech-list" class="list-tech">
+        
       </ul>
     </section>
 
     <!-- footer -->
     <footer>
-      <div class="menu">
-        <div class="contact">
-          <div class="description">
-            <p class="name">Bachtiar Arya Habibie</p>
-            <div>
-              <iconify-icon
-                icon="mdi:gmail"
-                width="20"
-                height="20"
-              ></iconify-icon>
-              <p>bachtiararyahabibie1@gmail.com</p>
-            </div>
-            <div>
-              <iconify-icon
-                icon="solar:phone-outline"
-                width="20"
-                height="20"
-              ></iconify-icon>
-              <p>+62 822 3443 9795</p>
-            </div>
-            <div>
-              <iconify-icon
-                icon="ic:baseline-whatsapp"
-                width="20"
-                height="20"
-              ></iconify-icon>
-              <p>+62 822 3443 9795</p>
-            </div>
-          </div>
-        </div>
-        <menu>
-          <h3>Social Media</h3>
-          <ul>
-            <li>facebook</li>
-            <li>linkedin</li>
-            <li>instagram</li>
-            <li>github</li>
-          </ul>
-        </menu>
-        <menu>
-          <h3>Navigasi</h3>
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Projects</a></li>
-            <li><a href="#">Resume</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">Technology</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
-        </menu>
-        <menu>
-          <h3>Legal</h3>
-          <ul>
-            <li>Privacy Policy</li>
-            <li>Cookie Policy</li>
-          </ul>
-        </menu>
-      </div>
-      <hr />
       <div class="copyright">
         <p>Copyright © Bachtiar Arya Habibie 2023</p>
         <p>
-          Website design inspired by
-          <a href="https://flowbite.com/">flowbite</a> by Bachtiar Arya Habibie
+          Website design by Bachtiar Arya Habibie
         </p>
       </div>
     </footer>
@@ -423,38 +110,30 @@
     <script type="module" src="js/firebase.js"></script>
 
     <script>
-      $("#nav-button").on("click", function () {
-        $(".mobile-menu").toggle();
-      });
+      $("#navbar").load("templates/universal/navbar.html");
+      $("#projects").load("pages/portfolio.html");
     </script>
 
     <script type="module">
-      // Initialize Cloud Firestore and get a reference to the service
-      const db = firebase.firestore();
+      let list_tech = document.getElementById("tech-list");
+      const jsonFileUrl = "database/technology.json";
 
-      // Retrieve all documents from a collection
-      db.collection("projects")
-        .get()
-        .then((querySnapshot) => {
-          querySnapshot.forEach((doc) => {
-            const projectData = doc.data();
-            let parentElement = document.getElementById("portfolio");
-            
-            const card = createPortfolioCard(
-              parentElement,
-              projectData.title,
-              projectData.description,
-              projectData.image,
-              projectData.platform,
-              projectData.date,
-              projectData.status,
-              projectData.technology
-            );
-            
+      fetch(jsonFileUrl)
+        .then((response) => {
+          if (response.status === 200) {
+            return response.json(); // Parse the response as JSON
+          } else {
+            throw new Error("Failed to fetch data from the JSON file.");
+          }
+        })
+        .then((data) => {
+          data.map((value) => {
+            const tech_item = createTechnologyItem(value);
+            list_tech.appendChild(tech_item);
           });
         })
         .catch((error) => {
-          console.log("Error getting documents: ", error);
+          console.error(error);
         });
     </script>
   </body>

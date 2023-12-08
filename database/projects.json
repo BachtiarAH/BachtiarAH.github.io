@@ -1,0 +1,32 @@
+[
+  {
+    "image": "assets/img/projects/muarambaduk.png",
+    "title": "Muarambaduk",
+    "platform": ["mobile", "web"],
+    "description": "Muarambaduk is a multifunctional platform designed for both mobile and web users. This versatile solution offers a wide range of features and services, catering to diverse user needs. Explore the world of Muarambaduk and discover how it can enhance your digital experience."
+  },
+  {
+    "image":"assets/img/projects/weddintinvt.png",
+    "title":"Wedding Invitation",
+    "platform":["web"],
+    "description":"The Wedding Invitation Web App is an elegant and user-friendly platform designed to help couples create and manage their wedding invitations with ease. This web application offers a range of features to simplify the invitation process and provide a memorable experience for both the couple and their guests."
+  },
+  {
+    "image":"assets/img/projects/telemedicine.png",
+    "title":"Telemedicine",
+    "platform":["web"],
+    "description":"The Telemedicine Website Application is a comprehensive online platform that revolutionizes healthcare access by enabling patients to connect with medical professionals from the comfort of their own homes. Built on the Laravel framework, this web application offers a wide range of features to provide seamless and secure telemedicine services."
+  },
+  {
+    "image":"assets/img/projects/mmagym.png",
+    "title":"MMA GYM",
+    "platform":["web","mobile"],
+    "description":"AMMGYM is your all-in-one fitness companion, available as both a website and a mobile app, designed to help you achieve your fitness goals with a comprehensive library of exercises and workout plans. Whether you're a gym novice or an experienced fitness enthusiast, AMMGYM provides you with the tools and guidance to make the most out of your workouts."
+  },
+  {
+    "image":"assets/img/projects/lafo.png",
+    "title":"LAFO",
+    "platform":["desktop"],
+    "description":" desktop application for Cafe Lafo in Jember, East Java. The application aimed to optimize operational efficiency and elevate the customer experience. Integrated a robust database system to manage inventory, sales reporting, and the point-of-sale system, enhancing the ordering process and providing valuable insights through sales reports. "
+  }
+]

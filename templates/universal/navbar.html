@@ -1,0 +1,36 @@
+<div class="top">
+  <h1>Bachtiar Arya Habibie</h1>
+  <ul class="menu">
+    <li class="text"><a href="#home">Home</a></li>
+    <li class="text"><a href="#about">About</a></li>
+    <li class="text"><a href="#projects">Projects</a></li>
+    <li class="text"><a href="#tech">Technology</a></li>
+  </ul>
+  <button id="nav-button" class="nav-button">
+    <iconify-icon
+      id="nav-button-icon"
+      icon="iconamoon:menu-burger-horizontal-thin"
+      style="color: #666"
+      width="32"
+    ></iconify-icon>
+  </button>
+</div>
+<ul class="mobile-menu">
+  <li class="text"><a href="#home">Home</a></li>
+  <li class="text"><a href="#about">About</a></li>
+  <li class="text"><a href="#projects">Projects</a></li>
+  <li class="text"><a href="#tech">Technology</a></li>
+</ul>
+<script>
+    $("#nav-button").on("click", function () {
+      $(".mobile-menu").toggle();
+      const icon = $("#nav-button-icon");
+      var currentIcon = icon.attr("icon");
+
+      if (currentIcon === "iconamoon:menu-burger-horizontal-thin") {
+        icon.attr("icon", "ph:x-thin");
+      } else {
+        icon.attr("icon", "iconamoon:menu-burger-horizontal-thin");
+      }
+    });
+  </script>

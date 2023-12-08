@@ -156,11 +156,9 @@ body {
     color: var(--text-dark);
 }
 
-
-
 section {
     /* width: ; */
-    padding: 75px;
+    padding: 3%;
 }
 
 .h2 {
@@ -169,6 +167,7 @@ section {
     font-weight: bold;
     text-transform: capitalize;
     display: inline;
+    margin-top: 40px;
 }
 
 .h3 {

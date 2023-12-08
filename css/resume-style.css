@@ -1,13 +1,26 @@
 .resume{
+    display: flex;
     justify-content: space-between;
-    gap: 170px;
-    align-items: start;
-    padding-top: 55px;
-    padding-bottom: 55px;
+    align-items: center;
+    background-color: var(--secondary-color);
+    flex-wrap: wrap;
 }
 
 .resume p{
     margin-top: 1rem;
     text-align: justify;
     text-indent: 2rem;
+    color: var(--primary-color);
+}
+
+.h2-resume{
+    font-family: 'Unbounded', cursive;
+    font-size: 48px;
+    color: var(--primary-color);
+}
+
+@media(min-width: 1000px){
+    .resume p{
+        width: 50%;
+    }
 }

@@ -1,0 +1,102 @@
+[
+  {
+    "label": "java",
+    "icon": "devicon:java-wordmark",
+    "image": null
+  },
+  {
+    "label": "java script",
+    "icon": "logos:javascript",
+    "image": null
+  },
+  {
+    "label": "PHP",
+    "icon": "devicon:php",
+    "image": null
+  },
+  {
+    "label": "dart",
+    "icon": "logos:dart",
+    "image": null
+  },
+  {
+    "label": "laravel",
+    "icon": "logos:laravel",
+    "image": null
+  },
+  {
+    "label": "tailwind",
+    "icon": "vscode-icons:file-type-tailwind",
+    "image": null
+  },
+  {
+    "label": "react",
+    "icon": "logos:react",
+    "image": null
+  },
+  {
+    "label": "flutter",
+    "icon": "logos:flutter",
+    "image": null
+  },
+  {
+    "label": "android",
+    "icon": "devicon:android",
+    "image": null
+  },
+  {
+    "label": "unity",
+    "icon": "cib:unity",
+    "image": null
+  },
+  {
+    "label": "HTML",
+    "icon": "vscode-icons:file-type-html",
+    "image": null
+  },
+  {
+    "label": "nodejs",
+    "icon": "logos:nodejs",
+    "image": null
+  },
+  {
+    "label": "bootstrap",
+    "icon": "logos:bootstrap",
+    "image": null
+  },
+  {
+    "label": "MySql",
+    "icon": "logos:mysql",
+    "image": null
+  },
+  {
+    "label": "firebase",
+    "icon": "logos:firebase",
+    "image": null
+  },
+  {
+    "label": "github",
+    "icon": "ri:github-fill",
+    "image": null
+  },
+  {
+    "label": "typescript",
+    "icon": "logos:typescript-icon",
+    "image": null
+  },
+  {
+    "label": "linux",
+    "icon": "logos:linux-tux",
+    "image": null
+  },
+  {
+    "label": "arduino",
+    "icon": "logos:arduino",
+    "image": null
+  },
+  {
+    "label":"python",
+    "icon": "logos:python",
+    "image":null
+  }
+]
