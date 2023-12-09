@@ -1,0 +1,72 @@
+.experience-page {
+    background-color: var(--secondary-color);
+}
+
+.exp-border{
+    border-bottom: 1px solid black;
+    padding: 0 0 29px 0;
+}
+
+.exp-head {
+    margin: 28px 0 0 0;
+}
+
+.exp-head .exp-title {
+    color: var(--primary-color);
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 125%;
+    margin-left: -4px;
+}
+
+.exp-head .exp-title .exp-company {
+    color: var(--primary-color);
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 125%;
+    text-decoration-line: underline;
+}
+
+.exp-date {
+    color: rgba(30, 30, 30, 0.50);
+
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 30px;
+    margin: 4px 0 0 0;
+}
+
+.exp-line {
+    background-color: var(--primary-color);
+    width: 20%;
+    height: 10px;
+    margin: 4px 0 0 0;
+}
+
+.exp-task-list {
+    margin: 14px 0 0 20px;
+    list-style-type: disc;
+}
+
+.exp-task-item {
+    color: var(--primary-color);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 30px;
+    /* 30px */
+}
+
+@media (max-width:1000px){
+    .exp-title {
+        color: var(--primary-color);
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 125%;
+        margin-left: -4px;
+    }
+}

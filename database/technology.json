@@ -98,5 +98,10 @@
     "label":"python",
     "icon": "logos:python",
     "image":null
+  },
+  {
+    "label":"django",
+    "icon": "skill-icons:django",
+    "image":null
   }
 ]

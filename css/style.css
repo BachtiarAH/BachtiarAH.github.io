@@ -170,6 +170,15 @@ section {
     margin-top: 40px;
 }
 
+.h2-secondary{
+    font-size: 36px;
+    color: var(--primary-color);
+    font-weight: bold;
+    text-transform: capitalize;
+    display: inline;
+    margin-top: 40px;
+}
+
 .h3 {
     font-size: 28px; 
     color: white;
